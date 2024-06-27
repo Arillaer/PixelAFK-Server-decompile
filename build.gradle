@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+group = 'cn.damao'
+version = '1.1-SNAPSHOT'
+
+repositories {
+    maven {
+        name = "aliyun-repo"
+        url = "https://maven.aliyun.com/repository/public"
+    }
+    maven {
+        name = "spigotmc-repo"
+        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    compileOnly (fileTree(include: ['*.jar'], dir: 'libs'))
+}
+
+test {
+    useJUnitPlatform()
+}
+
+processResources {
+    include('plugin.yml')
+    include('config.yml')
+}
+
+jar{
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

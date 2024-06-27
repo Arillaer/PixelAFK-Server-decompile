@@ -1,0 +1,21 @@
+#插件设置
+Settings:
+  #玩家挂机多久后进入AFK警告
+  #时间单位以(秒)
+  AFK-CoolDown: 90
+  #挂机多长时间后进入AFK-Limbo服务器
+  #时间单位以(秒)
+  AFK-ConnectLimboServer-CoolDown: 100
+  #挂机子服务器(目前仅支持单个子服务器绑定，后期更新将会支持多个子服务器绑定)
+  AFK-Server: "AFK_SERVER#1"
+
+
+#这里是设置插件语言的地方=w=
+#颜色符号只支持 ( § )，后面更新支持 &符号。
+Language:
+  #AFK警告主标题
+  Warning-Title: "§c§l警告！！！"
+  #AFK警告副标题
+  Warning-Subtitle: "§b检测到你进入了挂机状态！"
+  #AFK警告信息通知
+  Warning-message: "§c检测到你长时间没有移动，已经自动挂机状态。若长时间处于挂机状态将自动传送至闲置大厅！"

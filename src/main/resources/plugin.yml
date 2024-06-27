@@ -1,0 +1,7 @@
+name: PixelAFK-Server
+version: '1.1-SNAPSHOT'
+main: cn.damao.catpixel.pixelafkserver.PixelAFK_Server
+author: DaMao_OVO
+commands:
+  PixelAFK:
+    description: 基于中国版Hypixel开发的一款便携简单的AFK插件
